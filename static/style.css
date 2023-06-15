@@ -1,0 +1,100 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	background-color: #f2f2f2;
+}
+
+#main-heading{
+	padding-top: 30px;
+	font: 100px Georgia;
+	text-shadow: 3px 3px #6c757d;
+}
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.card {
+	width: 300px;
+	height: 400px;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+	background-color: #fff;
+	margin: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+h1, h2 {
+	font-size: 24px;
+	margin: 0;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+#User-Input-Submit{
+	margin-top: 20px;
+	border-radius: 10px;
+	background: #e2faff;	
+}
+
+#User-Input-Submit:active{
+	background: #90adb3;
+}
+.current-price {
+	font-size: 48px;	
+	color: #198754;
+	font-weight: bold;
+}
+.prediction{
+	font-size: 48px;
+	color: #d48517;
+	font-weight: bold;
+}
+.current-volume, .predicted-volume, .range-volume {
+	font-size: 16px;
+	color: #6c757d;
+	margin: 5px 0;
+}
+
+.current-datetime, .predicted-datetime, .range-datetime ,.model-prediction, .Open-price, .Close-price, .average-price, .change, .previousClose {
+	font-size: 16px;
+	color: #6c757d;
+	margin: 5px 0;
+}
+
+.predicted-price {
+	font-size: 48px;
+	color: #ffc107;
+	font-weight: bold;
+}
+
+.low-price {
+	font-size: 24px;
+	color: #0d6efd;
+	font-weight: bold;
+}
+
+.high-price {
+	font-size: 24px;
+	color: #dc3545;
+	font-weight: bold;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+th, td {
+	padding: 5px;
+	text-align: center;
+	border: 1px solid #ddd;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bitcoin Price Prediction Dashboard</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script rel="javascript" type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<link rel="stylesheet" href="{{ url_for('static',filename='/style.css')}}">
+    <script src="{{ url_for('static', filename='/index.js')}}"></script>
+</head>
+<body>
+    <h1 id="main-heading">Bitcoin Price Prediction</h1>
+	<div class="container">
+		<div class="card">
+            <h2> Please Input date and time</h2>
+			<form>
+            <input id="User-Input" type="datetime-local" name='predictor' step="1"/><br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input id="User-Input-Submit" type="submit" />
+			</form>
+            <p class="model-prediction" style="padding-top:20px">The model has predicted price: </p>
+            <p class="prediction">$ <span id='prediction-id'></span></p>
+        </div>
+		<div class="card">
+			<h2>Current Price</h2>
+			<p class="current-price">$<span id="New-price"></span></p>
+			<p class="current-volume">Base Volume: <span id="current-volume-id"></span></p>
+			<p class="Open-price">Open: <span id="Open-price-id"></span></p>
+			<p class="Close-price">Close: <span id="Close-price-id"></span></p>
+			<p class="change">change: <span id="change-id"></span></p>
+			<p class="current-datetime">DateTime: <span id="Date-and-Time"></span> </p>
+		</div> 	
+		<div class="card">
+			<h2>Predicted Price</h2>
+			<p class="predicted-price">$ <span id='predicted-price-id'></span></p>
+			
+			<p class="predicted-datetime">Datetime: <span id='predicted-datetime-id'></span></p>
+		</div>
+		<div class="card">
+			<h2>Price Range</h2>
+			<table style="margin-bottom:30px;">
+				<thead>
+					<tr>
+						<th>Low Price</th>
+						<th>High Price</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>	
+						<td class="low-price">$<span  id="low-price-id"></span></td>
+						<td class="high-price">$<span id="high-price-id"></span></td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="range-volume">Base Volume: <span id="range-volume-id"></span></p>
+			<p class="average-price">Average Price: <span id="average-price-id"></span></p>
+			<p class="previousClose">Previous Close: <span id="previousClose-id"></span></p>
+			<p class="range-datetime">Datetime: <span id="range-datetime-id" ></span></p>
+		</div>
+	</div>
+</body>
+</html>
