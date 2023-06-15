@@ -2,7 +2,7 @@ import ccxt
 import pandas as pd
 import datetime as dt
 from prophet import Prophet
-
+from prophet.serialize import model_from_json
 
 class live_predict:
     def __init__(self):
@@ -10,7 +10,8 @@ class live_predict:
         self.symbol = 'BTC/USDT'
         self.timeframe = '1m'
         self.limit = 1000  
-        self.model = Prophet()
+        with open('serialized_model.json', 'r') as fin:
+        self.model =  model_from_json(fin.read())
         self.historical_data=None
         self.dataset=None
         self.latest=None
