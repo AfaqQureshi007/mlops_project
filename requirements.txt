@@ -1,0 +1,9 @@
+flask
+Jinja2
+scikit-learn
+pandas
+numpy
+matplotlib
+requests
+ccxt
+prophet
